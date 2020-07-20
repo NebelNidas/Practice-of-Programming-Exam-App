@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Burner Health</string>
+    <string name="log_in">Log In</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="password_hint_text">Username = Max; Password = 123456</string>
+    <string name="home">Home</string>
+    <string name="my_medical_data">My Medical Data</string>
+    <string name="communicate_with_your_doctor">Communicate with your doctor</string>
+    <string name="chat_with_your_doctor">Chat with your doctor</string>
+    <string name="medical_training">Medical Training</string>
+    <string name="my_medical_data_description_text">View and add data like your walked distance, active workouts, what you eat, monitor your weight and much more.</string>
+    <string name="my_medical_learning_description_text">Learn about interesting topics like what to do against sleepiness, which diets you should prefer or even how to draw blood correctly yourself.</string>
+    <string name="communicate_with_your_doctor_description_text">Chat with your doctor about your medical concerns or start a videocall with him. Send and receive important files, even huge Nifti, Minc, Dicom and Analyze ones.</string>
+    <string name="test_yourself">Test yourself!</string>
+    <string name="send">Send</string>
+    <string name="type_your_message">Type your message...</string>
+    <string name="share_app">Share this app</string>
+    <string name="visit_homepage">Visit our homepage</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_subtitle">burnerjulian@gmail.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+</resources>
