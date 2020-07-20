@@ -47,7 +47,7 @@ public class AddStringDialog extends AppCompatDialogFragment {
         hint = bundle.getString("hint");
 
         LayoutInflater layoutInflater = getActivity().getLayoutInflater();
-        final View view = layoutInflater.inflate(R.layout.dialog_add_string_plus_number, null);
+        final View view = layoutInflater.inflate(R.layout.dialog_add_string, null);
         text_chooser = view.findViewById(R.id.text_chooser);
 
         text_chooser.setHint(hint);
@@ -67,7 +67,7 @@ public class AddStringDialog extends AppCompatDialogFragment {
                         int number;
                         boolean ok = true;
 
-                        if (text_chooser.getText().toString().matches("")) {
+                        if (!text_chooser.getText().toString().matches("")) {
                             text = text_chooser.getText().toString();
                             try {
                                 addDialogListener.passDataBack(text);
@@ -75,7 +75,7 @@ public class AddStringDialog extends AppCompatDialogFragment {
                                 e.printStackTrace();
                             }
                         } else {
-                            Toast.makeText(getActivity(), "Please fill out all boxes!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getActivity(), "Please enter an allergy!", Toast.LENGTH_SHORT).show();
                             // TODO: Dialog shouldn't close here
                         }
                     }
