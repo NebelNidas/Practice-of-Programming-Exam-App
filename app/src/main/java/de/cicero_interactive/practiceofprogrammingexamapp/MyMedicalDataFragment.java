@@ -161,9 +161,9 @@ public class MyMedicalDataFragment extends Fragment {
         String allergies_preview_text = "";
         try {
             if (myDatabase.getAllergies().size() != 0)  {
-                for (int i = 0; i < 2; i++) {
+                for (int i = 0; i < myDatabase.getAllergies().size(); i++) {
                     allergies_preview_text += myDatabase.getAllergies().get(i).getName();
-                    if (i < 1) {
+                    if (i < myDatabase.getAllergies().size() - 1) {
                         allergies_preview_text += ", ";
                     }
                 }
