@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -101,14 +102,33 @@ public class ViewFoodActivity extends AppCompatActivity implements AddStringPlus
 
 
 
-    // Makes sure that you get back to the correct fragment in MainActivity
+
+    @Override
+    public void onBackPressed() {
+        try {
+            handleBackButtonPressed();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-                onBackPressed();
+                try {
+                    handleBackButtonPressed();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+                return true;
         }
 
-        return true;
+        return(super.onOptionsItemSelected(item));
+    }
+
+    public void handleBackButtonPressed() throws JSONException {
+        setResult(RESULT_OK);
+        finish();
     }
 }

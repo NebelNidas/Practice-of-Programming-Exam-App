@@ -93,7 +93,7 @@
                         </LinearLayout>
 
                         <TextView
-                            android:id="@+id/food_calories"
+                            android:id="@+id/food_preview"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
@@ -181,7 +181,7 @@
                         </LinearLayout>
 
                         <TextView
-                            android:id="@+id/sleep_time"
+                            android:id="@+id/sleep_preview"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
@@ -269,7 +269,7 @@
                         </LinearLayout>
 
                         <TextView
-                            android:id="@+id/weight_value"
+                            android:id="@+id/weight_preview"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
@@ -358,7 +358,7 @@
                         </LinearLayout>
 
                         <TextView
-                            android:id="@+id/allergies_value"
+                            android:id="@+id/allergies_preview"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
