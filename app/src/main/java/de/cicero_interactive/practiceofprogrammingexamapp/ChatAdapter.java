@@ -70,7 +70,7 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.MyViewHolder> 
 
         String sender = messages.get(position).getSender();
         String content = messages.get(position).getMessage();
-        String date = new SimpleDateFormat("dd MMMM yyyy, hh:mm").format(messages.get(position).getDate());
+        String date = new SimpleDateFormat("dd MMMM yyyy, HH:mm").format(messages.get(position).getDate());
 
         holder.message_sender.setText(sender);
         holder.message_content.setText(content);

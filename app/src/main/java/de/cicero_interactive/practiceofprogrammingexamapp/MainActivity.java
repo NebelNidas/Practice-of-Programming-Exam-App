@@ -1,6 +1,7 @@
 package de.cicero_interactive.practiceofprogrammingexamapp;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
@@ -55,6 +56,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_home:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
                 break;
+            case R.id.nav_my_medical_data:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new MyMedicalDataFragment()).commit();
+                break;
             case R.id.nav_medical_training:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new MedicalTrainingFragment()).commit();
                 break;
@@ -65,11 +69,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
                 sharingIntent.setType("text/plain");
                 sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Sharing URL");
-                sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, "https");
+                sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, "https://github.com/NebelNidas/Practice-of-Programming-Exam-App");
                 startActivity(Intent.createChooser(sharingIntent, "Share URL"));
                 break;
             case R.id.nav_homepage:
-                Toast.makeText(this, "Homepage", Toast.LENGTH_SHORT).show();
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/NebelNidas/Practice-of-Programming-Exam-App"));
+                startActivity(browserIntent);
                 break;
         }
         drawer.closeDrawer(GravityCompat.START);

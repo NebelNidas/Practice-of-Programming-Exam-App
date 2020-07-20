@@ -19,7 +19,7 @@ import com.android.volley.toolbox.Volley;
 import com.google.android.material.navigation.NavigationView;
 
 public class HomeFragment extends Fragment {
-    CardView medical_data_card,
+    CardView my_medical_data_card,
             medical_training_card,
             communication_card;
     private NavigationView navigationView;
@@ -32,10 +32,17 @@ public class HomeFragment extends Fragment {
         navigationView = getActivity().findViewById(R.id.nav_view);
         getActivity().setTitle(R.string.app_name);
 
-        medical_data_card = inf.findViewById(R.id.medical_data_card);
+        my_medical_data_card = inf.findViewById(R.id.medical_data_card);
         medical_training_card = inf.findViewById(R.id.medical_training_card);
         communication_card = inf.findViewById(R.id.communication_card);
 
+        my_medical_data_card.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new MyMedicalDataFragment()).commit();
+                navigationView.setCheckedItem(R.id.nav_my_medical_data);
+            }
+        });
         medical_training_card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
