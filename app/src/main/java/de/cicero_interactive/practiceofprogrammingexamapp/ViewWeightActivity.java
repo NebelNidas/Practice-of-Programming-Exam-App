@@ -24,6 +24,7 @@ public class ViewWeightActivity extends AppCompatActivity implements AddNumberDi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_medical_data);
+        setTitle(R.string.weight);
 
         MyDatabase myDatabase = new MyDatabase(this);
         try {

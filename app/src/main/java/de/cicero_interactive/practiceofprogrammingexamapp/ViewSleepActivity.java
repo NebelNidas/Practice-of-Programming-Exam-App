@@ -24,6 +24,7 @@ public class ViewSleepActivity extends AppCompatActivity implements AddNumberDia
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_medical_data);
+        setTitle(R.string.sleep);
 
         MyDatabase myDatabase = new MyDatabase(this);
         try {

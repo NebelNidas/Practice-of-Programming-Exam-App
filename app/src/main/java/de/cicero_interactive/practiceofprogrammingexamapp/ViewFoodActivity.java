@@ -25,6 +25,7 @@ public class ViewFoodActivity extends AppCompatActivity implements AddStringPlus
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_medical_data);
+        setTitle(R.string.food);
 
         MyDatabase myDatabase = new MyDatabase(this);
         try {
