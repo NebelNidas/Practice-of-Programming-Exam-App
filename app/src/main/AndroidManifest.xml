@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ViewAllergiesActivity"></activity>
+        <activity android:name=".ViewAllergiesActivity"
+            android:parentActivityName=".MainActivity"></activity>
         <activity
             android:name=".ViewFoodActivity"
             android:parentActivityName=".MainActivity" />
